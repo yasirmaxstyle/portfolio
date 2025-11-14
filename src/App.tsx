@@ -21,13 +21,20 @@ export default function VSCodePortfolio() {
   const activeFile = openTabs[activeTabIndex] || null
 
   const handleFileSelect = (filename: string) => {
-    const existingIndex = openTabs.indexOf(filename)
-    if (existingIndex !== -1) {
-      setActiveTabIndex(existingIndex)
-    } else {
-      setOpenTabs([...openTabs, filename])
-      setActiveTabIndex(openTabs.length)
-    }
+    setOpenTabs((prev) => {
+      const existingIndex = prev.indexOf(filename)
+
+      if (existingIndex !== -1) {
+        setActiveTabIndex(existingIndex)
+        return prev
+      }
+
+      // NEW TABS
+      const newTabs = [...prev, filename]
+      setActiveTabIndex(newTabs.length - 1)
+      return newTabs
+    })
+
     if (isMobile) setSidebarOpen(false)
   }
 
