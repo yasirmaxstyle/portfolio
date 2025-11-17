@@ -42,14 +42,14 @@ export function TabBar({ openTabs, activeTabIndex, onTabSelect, onTabClose }: Re
               <span className="truncate flex-1">{filename}</span>
               <Button
                 variant="ghost"
-                size="sm"
+                size="icon"
                 className="h-4 w-4 p-0 opacity-0 group-hover:opacity-100 hover:bg-destructive/20 transition-all"
                 onClick={(e) => {
                   e.stopPropagation()
                   onTabClose(index)
                 }}
               >
-                <X className="h-3 w-3" />
+                <X />
               </Button>
             </motion.div>
           )
