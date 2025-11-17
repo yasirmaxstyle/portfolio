@@ -2,6 +2,8 @@
 
 A **VSCode-inspired portfolio website** built with **React 19**, **Vite**, **TypeScript**, **TailwindCSS**, **shadcn/ui**, and **Framer Motion** — showcasing my work as if it were a real codebase you could open in an editor.
 
+[Live Preview](https://yasirmaxstyle.github.io/portfolio/)
+
 ---
 
 ## Features
