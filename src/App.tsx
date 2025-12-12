@@ -124,7 +124,10 @@ export default function VSCodePortfolio() {
                   duration: UI_CONSTANTS.ANIMATION_DURATION.NORMAL,
                   ease: "easeInOut",
                 }}
-                className={`bg-sidebar border-r border-border overflow-hidden z-20 ${isMobile ? "absolute h-full" : "relative"
+                className={`bg-sidebar border-r border-border overflow-hidden z-20
+                  ${isMobile
+                    ? "absolute h-full"
+                    : "relative"
                   }`}
               >
                 <Explorer

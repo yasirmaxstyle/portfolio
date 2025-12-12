@@ -34,7 +34,10 @@ export function TabBar({ openTabs, activeTabIndex, onTabSelect, onTabClose }: Re
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -20 }}
               transition={{ duration: UI_CONSTANTS.ANIMATION_DURATION.FAST }}
-              className={`flex items-center gap-2 px-3 py-1 text-sm border-r border-border cursor-pointer group min-w-0 max-w-48 ${isActive ? "bg-background text-foreground" : "bg-muted/20 text-muted-foreground hover:bg-muted/40"
+              className={`flex items-center gap-2 px-3 py-1 text-sm border-r border-border cursor-pointer group min-w-0 max-w-48
+                ${isActive
+                  ? "bg-background text-foreground"
+                  : "bg-muted/20 text-muted-foreground hover:bg-muted/40"
                 }`}
               onClick={() => onTabSelect(index)}
             >
